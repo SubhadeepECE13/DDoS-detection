@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDoS Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="container mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">DDoS Detection Using Entropy Computing</h1>
+        <form id="ddos-form" class="space-y-4">
+            <label for="dataPackets" class="block font-medium text-gray-700">Data Packets (comma-separated):</label>
+            <textarea id="dataPackets" name="dataPackets" rows="4" class="w-full p-2 border border-gray-300 rounded-md" required></textarea>
+
+            <label for="entropyThreshold" class="block font-medium text-gray-700">Entropy Threshold:</label>
+            <input type="number" step="0.01" id="entropyThreshold" name="entropyThreshold" value="5.0" class="w-full p-2 border border-gray-300 rounded-md" required>
+
+            <button type="submit" class="w-full py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Detect DDoS</button>
+            <button type="button" id="fetchTestData" class="w-full py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Fetch Test Data</button>
+        </form>
+
+        <div id="result" class="mt-6 text-center text-lg font-semibold"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
